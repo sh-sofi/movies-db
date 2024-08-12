@@ -1,5 +1,5 @@
 import { screen } from "@testing-library/react";
-                                    import userEvent from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import { graphql, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 
@@ -120,7 +120,7 @@ describe("Extra", () => {
         await userEvent.click(nextButton());
 
         expect(await screen.findByText("Anatomy Park")).toBeInTheDocument();
-        // expect(screen.queryByText("Pilot")).not.toBeInTheDocument();
+        expect(screen.queryByText("Pilot")).not.toBeInTheDocument();
     });
 
     it("shows previous page episodes when click 'Previous'", async () => {
@@ -131,7 +131,7 @@ describe("Extra", () => {
 
         await userEvent.click(prevButton());
 
-        expect(await screen.findByText("Pilot")).toBeInTheDocument();
-        expect(screen.queryByText("Lawnmower Dog")).not.toBeInTheDocument();
+        expect(await screen.findByText("Lawnmower Dog")).toBeInTheDocument();
+        expect(screen.queryByText("Anatomy Park")).not.toBeInTheDocument();
     });
 });
