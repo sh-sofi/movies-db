@@ -1,46 +1,110 @@
-# Getting Started with Create React App
+# Movies DB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Movies DB is a web application based on a public API, utilizing various techniques offered by React and related libraries. It is designed to explore and filter movies, showcasing additional features such as profiles, authentication, and dynamic data fetching from external APIs.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Demo](#demo)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Home Page**: Welcome message with a call-to-action to explore movies.
+- **Movies Page**: Browse and filter movies by genres and keywords.
+- **Extra Page**: Access episodes from an external source (e.g., Rick and Morty API).
+- **Protected Routes**: Certain pages or interaction with content require authentication.
+- **Authentication**: Includes login functionality and state management.
+- **Profile Page**: View user-specific information.
+- **Responsive Design**: Optimized for various screen sizes.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: A JavaScript library for building user interfaces. Used for developing components and managing the application state.
+- **React Router DOM**: A library for routing in React applications, enabling navigation between different pages of the app.
+- **React Redux**: A library for state management in large applications, allowing centralized storage and modification of data.
+- **Material UI**: A component library for React that follows Material Design principles to build user interfaces.
+- **Emotion**: A library for writing styles using the CSS-in-JS approach, allowing for flexible and dynamic styling in React components.
+- **GraphQL**: A query language for APIs to fetch data. Used in this project for integrating with public APIs.
+- **Redux Toolkit**: A tool that simplifies using Redux, including convenient APIs for creating stores and handling asynchronous operations.
+- **Jest**: Testing framework.
+- **React Testing Library**: A library for testing React components, making it easier to verify their behavior.
+- **MSW (Mock Service Worker)**: A tool for mocking API requests during testing.
+- **Leaflet**: A library for integrating maps on web pages, used for displaying maps.
+- **LocalForage**: A library for asynchronous storage in the browser, supporting Web Storage, IndexedDB, and WebSQL.
+- **Match Sorter**: A library for sorting lists with search and filtering capabilities.
+- **@auth0/auth0-react**: A library for integrating Auth0, enabling user authentication in React applications.
+- **Babel**: A JavaScript compiler that transpiles modern JavaScript (ES6+) into compatible code for older browsers.
+- **APIs**: TMDB, Rick and Morty.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone this repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/sh-sofi/movies-db.git
+   cd movies-db
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Create a `.env` file in the main directory with the required API keys and configurations:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- REACT_APP_API_URL=https://api.themoviedb.org
+- REACT_APP_API_TOKEN=<api-token>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- REACT_APP_AUTH0_DOMAIN=AUTH0-DOMAIN
+- REACT_APP_AUTH0_CLIENT_ID=AUTH0-CLIENT-ID
+- REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000/callback
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- REACT_APP_AUTH0_AUDIENCE=AUTH0-API-AUDICENCE
+- REACT_APP_PROTECTED_API_URL=http://localhost:6060
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Start the application:
+   ```bash
+   npm start
+   ```
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Open the app in your browser at http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Navigate through the pages: Home, Movies, Extra, and Profile.
+
+Filter movies by genres and keywords on the Movies page.
+
+Use authentication features (e.g., Login) for restricted pages.
+
+## Demo
+
+![Home Page Screenshot](./public/movies_demo_homepage.PNG)
+Home Page Screenshot
+
+![Home Page Screenshot](./public/movies_demo_fav.PNG)
+Movies page
+
+![Home Page Screenshot](./public/movies_demo_extra.PNG)
+Extra page
+
+## Contributing
+
+This is a learning project, so contributions are not expected. However, feel free to fork and experiment with it. For suggestions or feedback, please open an issue.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+##
+
+Repository created during the course by ITVDN "React Advanced".
+
+Special thanks to the course instructor for guidance and learning materials. 🙌
+
