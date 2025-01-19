@@ -2,6 +2,9 @@
   "name": "movies-db",
   "version": "0.1.0",
   "private": true,
+  "author": "sh-sofi",
+  "license": "MIT",
+  "description": "A web application based on a public API, utilizing various techniques offered by React and related libraries.",
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
     "@emotion/react": "^11.11.1",
@@ -70,3 +73,4 @@
     ]
   }
 }
+
